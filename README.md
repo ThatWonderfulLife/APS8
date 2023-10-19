@@ -7,6 +7,15 @@
 Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) foi feita uma API para consulta de jogos, contendo os dados variados e de importancia para a analise dos mesmos, aplicando um retorno em arquivo .json.
 [Link do dataset](https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings)
 
+##### Integrantes do Grupo
+|**Nome**|**RA**|**Turma**|
+|Pedro Marques Arena|N618AE4|CC8Q18|
+|Mauricio Vitaliano Dolacio|N604AH8||
+|João Vitor Fernandes de Lima|F314618||
+|João Vitor Mine Nascimento|N5816B9||
+|Bruna Sabbato da Silva|F208850||
+|Débora Inacio Santos|F250083||
+
 #### Documentação / Use Cases
 
 
