@@ -1,0 +1,17 @@
+{
+    "EU_Sales": 5,
+    "JP_Sales": 4,
+    "NA_Sales": 3,
+    "Genre": "sim",
+    "Name": "PostTeste",
+    "Platform": "PC",
+    "Publisher": "Eu mesma",
+    "YearOfRelease": 2040,
+    "Other_Sales": 2,
+    "Global_Sales": 2,
+    "Critic_Score": 2,
+    "Critic_Count": 2,
+    "User_Score": 100,
+    "Developer": "eu propria",
+    "Rating": 1
+}
