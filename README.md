@@ -2,6 +2,11 @@
 
 ### APS Ultimo semestre Ciências da Computação UNIP 2023
 
+#### Descrição
+
+Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) foi feita uma API para consulta de jogos, contendo os dados variados e de importancia para a analise dos mesmos, aplicando um retorno em arquivo .json.
+[Link do dataset](https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings)
+
 #### Documentação / Use Cases
 
 
