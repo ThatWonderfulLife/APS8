@@ -9,12 +9,13 @@ Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) 
 
 ##### Integrantes do Grupo
 |**Nome**|**RA**|**Turma**|
-|Pedro Marques Arena|N618AE4|CC8Q18|
-|Mauricio Vitaliano Dolacio|N604AH8||
-|João Vitor Fernandes de Lima|F314618||
-|João Vitor Mine Nascimento|N5816B9||
-|Bruna Sabbato da Silva|F208850||
-|Débora Inacio Santos|F250083||
+   |---|---|---|
+    |Pedro Marques Arena|N618AE4|CC8Q18|
+    |Mauricio Vitaliano Dolacio|N604AH8||
+    |João Vitor Fernandes de Lima|F314618||
+    |João Vitor Mine Nascimento|N5816B9||
+    |Bruna Sabbato da Silva|F208850||
+    |Débora Inacio Santos|F250083||
 
 #### Documentação / Use Cases
 
