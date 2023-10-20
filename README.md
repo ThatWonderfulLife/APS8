@@ -22,15 +22,15 @@ Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) 
 
 1. GET
 - "/getAllGames"
-- "/getAllGamesByConsole/&lt console &gt"
-- "/getAllByYear/&lt year &gt"
-- "/getAllByGenre/&lt genre &gt"
-- "/getAllByPublisher/&lt publisher &gt "
+- "/getAllGamesByConsole/< console >"
+- "/getAllByYear/< year >"
+- "/getAllByGenre/< genre >"
+- "/getAllByPublisher/< publisher > "
 - "/getFromUserScore"
 - "/getFromCriticScore"
 - "/getFromGlobalSales"
-- "/getFromDeveloper/&lt developer &gt"
-- "/getBestFromDeveloper/&lt developer &gt"
+- "/getFromDeveloper/< developer >"
+- "/getBestFromDeveloper/< developer >"
 1. POST
 - "/postNewEntry" -> .json file
 2. PUT
