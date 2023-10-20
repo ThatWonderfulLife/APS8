@@ -8,7 +8,8 @@ data=[]
 result =[]
 server = 'DESKTOP-0LIUFQV'
 database = 'python_dataset'
-
+username = 'Administrador'
+password = ''
 app = Flask(__name__)
 
 def sortData(rows):
@@ -37,18 +38,20 @@ def getData(sqlCommand):
 
     return data
 
+
 def postData(file):
     try:
         conn = db.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';')
         call = conn.cursor()
         data = file
-        sqlCommand = "insert into dbo.dataset_import (Name,Platform,YearOfRelease,Genre,Publisher,NA_Sales,EU_Sales,JP_Sales,Other_Sales,Global_Sales,Critic_Score,Critic_Count,User_Score,Developer,Rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-        call.execute(f"{sqlCommand}",data["Name"],data["Platform"],data["YearOfRelease"],data["Genre"],data["Publisher"],data["NA_Sales"],data["EU_Sales"],data["JP_Sales"],data["Other_Sales"],data["Global_Sales"],data["Critic_Score"],data["Critic_Count"],data["User_Score"],data["Developer"],data["Rating"])
+        sqlCommand = f'''insert into dbo.dataset_import (Name,Platform,YearOfRelease,Genre,Publisher,NA_Sales,EU_Sales,JP_Sales,Other_Sales,Global_Sales,Critic_Score,Critic_Count,User_Score,Developer,Rating) VALUES ('{data["Name"]}','{data["Platform"]}',{data["YearOfRelease"]},'{data["Genre"]}','{data["Publisher"]}',{data["NA_Sales"]},{data["EU_Sales"]},{data["JP_Sales"]},{data["Other_Sales"]},{data["Global_Sales"]},{data["Critic_Score"]},{data["Critic_Count"]},{data["User_Score"]},'{data["Developer"]}',{data["Rating"]})'''
+        print(sqlCommand)
+        call.execute(f"{sqlCommand}")
         call.close()
         conn.close()
-        return jsonify({"message": "Data added successfully"})
+        return jsonify({"message": "Data added successfully", "Query":[sqlCommand]})
     except Exception as e:
-        return jsonify({"Erro": str(e)})
+        return jsonify({"Erro": str(e), "Query":[sqlCommand]})
     
 @app.route("/")
 def home():
@@ -67,11 +70,11 @@ def getAllByYear(year):
 
 @app.route("/getAllByGenre/<genre>",methods = ["GET"])
 def getAllByGenre(genre):
-    return getData(f"select * from dbo.dataset_import where Genre = {genre}")
+    return getData(f"select * from dbo.dataset_import where Genre = '{genre}'")
 
 @app.route("/getAllByPublisher/<publisher>",methods = ["GET"])
 def getAllByPublisher(publisher):
-    return getData(f"select * from dbo.dataset_import where publisher = {publisher}")
+    return getData(f"select * from dbo.dataset_import where publisher = '{publisher}'")
 
 @app.route("/getFromUserScore",methods = ["GET"])
 def getFromUserScore():

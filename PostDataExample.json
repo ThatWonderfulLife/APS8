@@ -5,13 +5,13 @@
     "Genre": "sim",
     "Name": "PostTeste",
     "Platform": "PC",
-    "Publisher": "Eu mesma",
+    "Publisher": "Eu_mesma",
     "YearOfRelease": 2040,
     "Other_Sales": 2,
     "Global_Sales": 2,
     "Critic_Score": 2,
     "Critic_Count": 2,
     "User_Score": 100,
-    "Developer": "eu propria",
+    "Developer": "eu_propria",
     "Rating": 1
 }
