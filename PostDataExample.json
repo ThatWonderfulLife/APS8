@@ -3,7 +3,7 @@
     "JP_Sales": 4,
     "NA_Sales": 3,
     "Genre": "sim",
-    "Name": "PostTeste",
+    "Name": "TesteApiBrasil",
     "Platform": "PC",
     "Publisher": "Eu_mesma",
     "YearOfRelease": 2040,
@@ -12,6 +12,7 @@
     "Critic_Score": 2,
     "Critic_Count": 2,
     "User_Score": 100,
+	"User_Count": 1,
     "Developer": "eu_propria",
     "Rating": 1
 }
