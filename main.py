@@ -1,13 +1,28 @@
 import mysql.connector
 import json
 from flask import Flask,render_template,request,jsonify
+from functools import wraps
 
 mydb = mysql.connector.connect(
   host="",
   user="",
-  password="&",
+  password="",
   database=""
 )
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth_header = request.headers.get("Authorization")
+        if not auth_header:
+            return jsonify(message="Authorization required"), 401
+
+        token = auth_header.split("Bearer ")[-1]
+        if token != SECRET_TOKEN:
+            return jsonify(message="Invalid token"), 401
+
+        return f(*args, **kwargs)
+    return decorated
 
 def getData(sqlCommand):
     data = []
@@ -32,20 +47,21 @@ def postData(data):
         cursor.execute(sqlCommand)
         mydb.commit()
 
-        cursor.close()
-        mydb.close()
-        return jsonify({"message": "Data added successfully", "Query":[sqlCommand]})
-    
     except Exception as e:
-        return jsonify({"Erro": str(e), "Query":[sqlCommand]})
+        return jsonify({"Erro": str(e)})
+    finally:
+        cursor.close()
+    return jsonify({"message": "Data added successfully"})
 
 app = Flask(__name__)
+SECRET_TOKEN = ""
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
 @app.route("/getAllGames")
+@requires_auth
 def getAllGames():
     data=json.loads(getData("select * from mysql.Games"))
     return jsonify(data)
@@ -96,8 +112,10 @@ def getBestFromDeveloper(developer):
     return jsonify(data)
 
 @app.route("/postNewGame",methods = ["POST"])
+@requires_auth
 def postNewGame():
-    return postData(request.get_json())
+    file = request.get_json()
+    return postData(file)
 
 if __name__ == "__main__":
     app.run(host='',port=9999, debug=True)

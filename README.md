@@ -20,6 +20,7 @@ Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) 
 
 #### Documentação / Use Cases
 
+**ATENÇÃO: OS MÉTODOS REQUEREM AUTENTICAÇÃO PARA ACESSO E O MÉTODO POST REQUER ESPECIFICAÇÃO DO TIPO DE CONTEUDO PARA "type/json"**
 
 1. GET
 - "/getAllGames"
@@ -34,8 +35,6 @@ Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) 
 - "/getBestFromDeveloper/< developer >"
 1. POST
 - "/postNewEntry" -> .json file
-2. PUT
-- 
 
 3. DELETE
 - 
