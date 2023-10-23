@@ -12,10 +12,10 @@ Utilizando um dos datasets do [site fornecido](https://www.kaggle.com/datasets) 
 |**Nome**|**RA**|**Turma**|
 |---|---|---|
 |Pedro Marques Arena|N618AE4|CC8Q18|
-|Mauricio Vitaliano Dolacio|N604AH8|0|
+|Mauricio Vitaliano Dolacio|N604AH8|CC8P18|
 |João Vitor Fernandes de Lima|F314618|CC8P18|
-|João Vitor Mine Nascimento|N5816B9|0|
-|Bruna Sabbato da Silva|F208850|0|
+|João Vitor Mine Nascimento|N5816B9|CC8Q18|
+|Bruna Sabbato da Silva|F208850|CC8P18|
 |Débora Inacio Santos|F250083|CCP18|
 
 #### Documentação / Use Cases
