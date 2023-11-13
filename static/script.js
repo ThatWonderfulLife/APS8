@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameTableBody = document.getElementById("gameTableBody");
 
     getAllGamesButton.addEventListener("click", function() {
-        const apiKey = "X}u~Pree#wrNj3_0v;&('h+_!";
+        const apiKey = "CHAVE";
         const url = "/getAllGames";
 
         fetch(url, {
