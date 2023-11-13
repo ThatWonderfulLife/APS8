@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const gameTableBody = document.getElementById("gameTableBody");
 
     getAllGamesButton.addEventListener("click", function() {
-        // Substitua 'SUA_CHAVE_API_AQUI' pela sua chave de API
         const apiKey = "X}u~Pree#wrNj3_0v;&('h+_!";
         const url = "/getAllGames";
 
@@ -42,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error(error);
             gameTableBody.innerHTML = '';
-            // Você pode exibir uma mensagem de erro no corpo da tabela, se desejar.
         });
     });
 });
